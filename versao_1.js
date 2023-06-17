@@ -30,14 +30,18 @@ const somaComputador = carta1DoComputador.valor + carta2DoComputador.valor
 console.log(`Usuário - cartas: ${carta1DoUsuário.texto} ${carta2DoUsuário.texto} - pontuação ${somaUsuario}`);
 console.log(`Computador - cartas: ${carta1DoComputador.texto} ${carta2DoComputador.texto} - pontuação ${somaComputador}`);
 
-if (somaUsuario > somaComputador){
+if (somaUsuario > 21){
+  console.log("Computador ganhou, usuário somou mais que 21 pontos");
+}else if (somaComputador > 21){
+  console.log("Usuário ganhou, usuário somou mais que 21 pontos");
+}else if (somaUsuario > somaComputador){
   console.log("Usuário venceu");
 }else if(somaUsuario < somaComputador){
   console.log("Computador venceu");
 }else{
   console.log("Empate");
 }
-
-} else { 
+}
+else{ 
   console.log("O jogo acabou");
 }
